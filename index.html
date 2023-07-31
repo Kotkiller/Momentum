@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="assets/favicon.ico" rel="shortcut icon" />
-  <link rel="stylesheet" href="css/owfont-regular.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>momentum</title>
-</head>
-<body>
-  <header class="header">
-    <div class="player">
-      <audio class="audio" src="assets/sounds/River Flows In You.mp3" >
-      </audio>
-      <div class="player-controls">
-        <button class="play-prev player-icon"></button>
-        <button class="play player-icon"></button>
-        <button class="play-next player-icon"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      
+      <div class="player">
+       <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <input 
+        type="range" 
+        id="progress-bar" 
+        min="0" 
+        max="" 
+        value="0" 
+        onchange="changeProgressBar()"/>
+    <div class="currentTime"></div>
+    <div class="durationTime"></div>
+              <select class="change-lang">
+            <option value="ru">RU</option>
+            <option value="en" selected>EN</option>
+          </select>
+                <audio class="audio" src="assets/sounds/River Flows In You.mp3"> </audio>
+        <ul class="play-list">
+          <li class="play-item track1"> Aqua Caelestis </li>
+          <li class="play-item  track2"> River Flows In You </li>
+          <li class="play-item track3"> Ennio Morricone </li>
+          <li class="play-item track4"> Summer Wind</li>
+        </ul>
       </div>
-      <ul class="play-list">
-        <li class="play-item">River Flows In You</li>
-        <li class="play-item">Ennio Morricone</li>
-        <li class="play-item">Aqua Caelestis</li>
-        <li class="play-item">Summer Wind</li>
-      </ul>
-    </div>
-    <div class="weather">
-      <input type="text" class="city" placeholder="[Enter city]"/>
-      <i class="weather-icon owf"></i>
-      <div class="weather-error"></div>
-      <div class="description-container">
-        <span class="temperature"></span>
-        <span class="weather-description"></span>
+      <div class="weather">
+        <input type="text" class="city lng" placeholder="[Enter city]" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
       </div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
-    </div>
-  </header>
-  <main class="main">
-    <div class="slider-icons">
-      <button class="slide-prev slider-icon"></button>
-      <button class="slide-next slider-icon"></button>
-    </div>
-    <time class="time"></time>
-    <date class="date"></date>
-    <div class="greeting-container">
-      <span class="greeting"></span>
-      <input type="text" class="name" placeholder="[Enter name]" />
-    </div>
-  </main>
-  <footer class="footer">
-    <button class="change-quote"></button>
-    <div>
-      <div class="quote"></div>
-      <div class="author"></div>
-    </div>
-  </footer>
-  <script src="js/script.js"></script>
-  <!-- <script src="js/playList.js"></script> -->
-</body>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name lng" placeholder="[Enter name]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+        <p class="copyright">2022</p>
+        <a href="https://rs.school/js-stage0/" class="rss" target="_blank" ><img src="assets/svg/rss.svg" alt="photo" class="rss1"></a>
+        <a href="https://github.com/Kotkiller" class="git" target="_blank"><img src="assets/svg/git.png" alt="photo" class="github"></a>
+      </div>
+    </footer>
+    <script  type="module" src="js/script.js"></script>
+  </body>
 </html>
